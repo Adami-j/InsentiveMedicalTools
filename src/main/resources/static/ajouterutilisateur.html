@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un utilisateur</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<href th:href="@{/css/bootstrap.min.css}"></href>
+<href th:href="@{/css/style.css}"></href>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+</head>
+<style>
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222;
+        color: white;
+    }
+    /* Formulaire de connexion */
+    .login-form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .login-form h1 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .login-form .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .login-form .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2em;
+        border: none;
+        border-bottom: 2px solid #444;
+        background-color: transparent;
+        color: lightskyblue;
+    }
+    .login-form .form-control:focus {
+        outline: none;
+        border-color: #00b8d4;
+    }
+    .login-form .form-control + .fa { /* Icone */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #444;
+    }
+    .login-form .btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        background-color: #00b8d4;
+        color: #fff;
+        cursor: pointer;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+
+    .tit {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #00b8d4;
+    }
+</style>
+<body>
+
+
+<div class="container">
+    <div class="container mt-5 ">
+        <div class="row justify-content-center login-form">
+            <div class="col-md-6">
+                <h1 class="text-center tit">Nouvel utilisateur</h1>
+                <!-- Formulaire de connexion -->
+                <form action="/ajouterUtilisateur" method="post" th:object="${Utilisateur}">
+                    <div class="form-control">
+                        <label for="nom">Nom</label>
+                        <input type="text" class="form-control" name="email" id="nom" th:value="*{nom}" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" class="form-control" name="email" id="prenom" th:value="*{prenom}" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" th:value="*{email}" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="motdepasse">Mot de passe</label>
+                        <input type="password" class="form-control" name="motdepasse" id="motdepasse" th:value="*{motdepasse}" placeholder="">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Valider</button>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
