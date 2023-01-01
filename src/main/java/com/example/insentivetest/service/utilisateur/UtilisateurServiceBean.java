@@ -13,7 +13,7 @@ public class UtilisateurServiceBean {
     }
 
     public Utilisateur save(Utilisateur utilisateur) {
-        if(utilisateur.getEmail()==null||this.findByEmail(utilisateur.getEmail())!=null||utilisateur.getLogin()==null||utilisateur.getMotdepasse()==null){
+        if(utilisateur.getEmail()==null||this.findByEmail(utilisateur.getEmail())!=null||utilisateur.getLogin()==null||utilisateur.getMotdepasse()==null || utilisateur.getId()==null){
             return null;
         }else{
             return this.utilisateurServiceLocal.save(utilisateur);

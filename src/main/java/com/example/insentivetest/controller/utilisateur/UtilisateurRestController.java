@@ -39,10 +39,22 @@ public class UtilisateurRestController {
         return utilisateurServiceBean.findById(id);
     }
 
-    @PostMapping("/ajouterUtilisateur")
-    public Utilisateur saveUtilisateur(@RequestBody Utilisateur utilisateur) {
-        utilisateur.setMotdepasse(sha256(utilisateur.getMotdepasse()));
-        return utilisateurServiceBean.save(utilisateur);
+    @PostMapping(path = "/ajouterutilisateur", consumes = "application/x-www-form-urlencoded")
+    public Utilisateur saveUtilisateur(Utilisateur utilisateur) {
+        System.out.println(utilisateur.toString());
+        if(utilisateur.getEmail()!=null&&utilisateurServiceBean.findByEmail(utilisateur.getEmail())==null&&utilisateur.getLogin()!=null&&utilisateur.getMotdepasse()!=null){
+
+            utilisateur.setMotdepasse(sha256(utilisateur.getMotdepasse()));
+
+            System.out.println(Integer.getInteger(sha256(utilisateur.getEmail())));
+            utilisateur.setId(1);
+
+            utilisateur.setActive(true);
+
+            return utilisateurServiceBean.save(utilisateur);
+        }
+
+        return null;
     }
 
     @DeleteMapping("/utilisateur")
@@ -100,9 +112,10 @@ public class UtilisateurRestController {
         Utilisateur utilisateur1 = utilisateurServiceBean.findByEmail(utilisateur.getEmail());
 
         if (utilisateur1 != null) {
-            if (sha256(utilisateur1.getMotdepasse()).equals(sha256(utilisateur.getMotdepasse()))) {
+            if (utilisateur1.getMotdepasse().equals(sha256(utilisateur.getMotdepasse()))) {
                 session.setAttribute("utilisateur", utilisateur1);
                 response.sendRedirect("/dashboard.html");
+                System.out.println(session.getAttribute("utilisateur")+ " est connecté"+ " "+ session.getId()+session.getCreationTime()+session.getLastAccessedTime());
 
                 return "";
             }
