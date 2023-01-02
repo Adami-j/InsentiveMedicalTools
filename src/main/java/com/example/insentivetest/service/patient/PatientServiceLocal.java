@@ -2,9 +2,12 @@ package com.example.insentivetest.service.patient;
 
 import com.example.insentivetest.modele.patient.Patient;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Repository
 public interface PatientServiceLocal extends CrudRepository<Patient,Integer> {
 
     @Override

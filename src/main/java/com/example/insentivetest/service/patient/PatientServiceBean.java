@@ -1,9 +1,11 @@
 package com.example.insentivetest.service.patient;
 
 import com.example.insentivetest.modele.patient.Patient;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Service
 public class PatientServiceBean {
 
     private PatientServiceLocal patientServiceLocal;
