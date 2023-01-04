@@ -78,8 +78,6 @@ public class UtilisateurRestController {
         if (utilisateur1 != null) {
             if (utilisateur1.getMotdepasse().equals(Utilitaire.sha256(utilisateur.getMotdepasse()))) {
 
-
-
                     session.setAttribute("utilisateur", utilisateur1);
                     response.sendRedirect("/dashboard.html");
                     System.out.println(session.getAttribute("utilisateur") + " est connecté" + " " + session.getId() + session.getCreationTime() + session.getLastAccessedTime());
