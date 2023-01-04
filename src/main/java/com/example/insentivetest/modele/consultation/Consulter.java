@@ -8,7 +8,8 @@ import java.time.Instant;
 @Entity
 @Table(name = "consulter")
 public class Consulter {
-    @EmbeddedId
+
+    @Id
     private ConsulterId id;
 
     @MapsId("idPatient")
