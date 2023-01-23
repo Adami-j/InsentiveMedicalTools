@@ -1,0 +1,31 @@
+.navconfig {
+    margin: 10px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.sidenavbarconfig{
+    margin: 10px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.itemnavconfig{
+    color: blue;
+}
+
+.mainbody {
+    margin-left: 10%;
+    margin-right: 10%;
+    background: darkblue;
+    width: 40%;
+    border-radius: 10px;
+    border-color: black;
+}
+.maincontainer{
+    margin-top : 3%;
+}
+.maindatatable{
+
+}

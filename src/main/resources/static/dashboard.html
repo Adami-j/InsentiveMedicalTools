@@ -11,127 +11,50 @@
 </head>
 <body>
 
-<div class="sidebar">
-    <div class="sidebar-brand">
-        <h2><span class="fa-solid fa-house"></span>InsentiveMedicalTool</h2>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light navconfig">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Insentive medical tool</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link  itemnavconfig active" aria-current="page" href="#">DashBoard</a>
+                <a class="nav-link itemnavconfig " href="#">Medecins</a>
+                <a class="nav-link itemnavconfig " href="#">Patients</a>
+                <a class="nav-link itemnavconfig">Rdv</a>
+            </div>
+        </div>
     </div>
-    <div class="sidebar-menu">
-        <ul>
-            <li>
-                <a href="dashboard.html" class="active"><span class="fa-solid fa-house"></span>
-                    <span>Dashboard</span></a>
-            </li>
-            <li>
-                <a href="patient.html"><span class="fa-solid fa-user"></span>
-                    <span>Patients</span></a>
-            </li>
-            <li>
-                <a href="medecins.html"><span class="fa-solid fa-user-md"></span>
-                    <span>Médecins</span></a>
-            </li>
-            <li>
-                <a href="pharmacies.html"><span class="fa-solid fa-clinic-medical"></span>
-                    <span>Pharmacies</span></a>
-            </li>
-            <li>
-                <a href="medicaments.html"><span class="fa-solid fa-pills"></span>
-                    <span>Medicaments</span></a>
-            </li>
-            <li>
-                <a href="consultations.html"><span class="fa-solid fa-stethoscope"></span>
-                    <span>Consultations</span></a>
-            </li>
-            <li>
-                <a href="rdvs.html"><span class="fa-solid fa-calendar"></span>
-                    <span>Rendez-vous</span></a>
-            </li>
-            <li>
-                <a href="factures.html"><span class="fa-solid fa-file-invoice"></span>
-                    <span>Factures</span></a>
-            </li>
-        </ul>
+</nav>
+<div class="container-fluid col-md-3">
+    <div class="row mainbody">
+        <div class="">
+
+        </div>
     </div>
-
-    <div class="content">
-        <header>
-            <div class="search-wrapper">
-                <span class="fa-solid fa-search"></span>
-                <input type="search" placeholder="Search here">
-            </div>
-            <div class="social-icons">
-                <span class="fa-solid fa-bell"></span>
-                <span class="fa-solid fa-envelope"></span>
-                <div></div>
-            </div>
-
-            <div id="dropdown" class="user-wrap">
-                <div class="user-img">
-                    <img src="https://i.imgur.com/0X0X0X0.jpg" alt="">
-                </div>
-                <div class="user-info">
-                    <span>John Doe</span>
-                    <small>Super Admin</small>
-                </div>
-                <span class="fa-solid fa-chevron-down"></span>
-                <div class="dropdows">
-                    <div class="dropdown-content">
-                    <a href="#"><span class="fa-solid fa-user"></span>Profil</a>
-                    <a href="#"><span class="fa-solid fa-cog"></span>Paramètres</a>
-                    <a href="#"><span class="fa-solid fa-sign-out-alt"></span>Deconnexion</a>
-                    </div>
-                </div>
-            </div>
-
-        </header>
-
-        <main>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
-                        <h1>2,500</h1>
-                        <span>Patients</span>
-                    </div>
-                    <div>
-                        <span class="fa-solid fa-user"></span>
-                    </div>
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>1,500</h1>
-                        <span>Médecins</span>
-                    </div>
-                    <div>
-                        <span class="fa-solid fa-user-md"></span>
-                    </div>
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>4,500</h1>
-                        <span>Pharmacies</span>
-                    </div>
-                    <div>
-                        <span class="fa-solid fa-clinic-medical"></span>
-                    </div>
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>6,500</h1>
-                        <span>Medicaments</span>
-                    </div>
-                    <div>
-                        <span class="fa-solid fa-pills"></span>
-                    </div>
-                </div>
-
-            </div>
-        </main>
-    </div>
-
-
-
-
 </div>
+
+<nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="nav nav-pills flex-column">
+        <a class="nav-link" href="#item-1">Item 1</a>
+        <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+        </nav>
+        <a class="nav-link" href="#item-2">Item 2</a>
+        <a class="nav-link" href="#item-3">Item 3</a>
+        <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+        </nav>
+    </nav>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </body>
 </html>

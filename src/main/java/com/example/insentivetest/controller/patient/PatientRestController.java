@@ -78,8 +78,4 @@ public class PatientRestController {
         return patientServiceBean.save(patient);
         }
 
-
-
-
-
 }

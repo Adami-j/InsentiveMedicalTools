@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
-@RestController("/")
+@RestController("")
 public class UtilisateurRestController {
 
     private UtilisateurServiceBean utilisateurServiceBean;
